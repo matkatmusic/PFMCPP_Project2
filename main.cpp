@@ -14,15 +14,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ void
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -56,10 +53,38 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
+    int n = 3;
+    int x = 4;
+    float pi = 3.14;
+    float y = 5.67;
+    float z = 7.89;
+    bool t = true;
+    bool f = false;
+    bool b = true;
+    double d = 123.456;
+    double g = 4.5;
+    double l = 9.98270345;
+    char a = "a";
+    char b = "b";
+    char c = "c";
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(n);
+    ignoreUnused(x);
+    ignoreUnused(pi);
+    ignoreUnused(y);
+    ignoreUnused(z);
+    ignoreUnused(t);
+    ignoreUnused(f);
+    ignoreUnused(b);
+    ignoreUnused(d);
+    ignoreUnused(g);
+    ignoreUnused(l);
+    ignoreUnused(a);
+    ignoreUnused(b);
+    ignoreUnused(c);
+
+    return void;
 }
 /*
  10 functions
@@ -74,42 +99,85 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+void playMelody(int steps, char root, bool isMinor = false)
+{
+  ignoreUnused(steps, root, isMinor);
+  return void;
+}
 /*
  2)
  */
-
+void skipRope(int skips, float ropeLength = 3.0, bool reverse = false)
+{
+  ignoreUnused(skips, ropeLength, reverse);
+  return void;
+}
 /*
  3)
  */
+ int add(int a, int b)
+ {
+   ignoreUnused(a, b);
+   return {};
+ }
 
 /*
  4)
  */
+ bool greaterThan(float a, float b)
+ {
+   ignoreUnsued(a, b);
+   return {};
+ }
 
 /*
  5)
  */
-
+void foo(double bar, char baz)
+{
+  ignoreUnused(bar, baz);
+  return void;
+}
 /*
  6)
  */
-
+void walkToStore(int speed, int store = 0)
+{
+  ignoreUnused(speed, store);
+  return void;
+}
 /*
  7)
  */
-
+float multiply(float a, float b)
+{
+  ignoreUnused(a, b);
+  return {};
+}
 /*
  8)
  */
-
+void sleep(int millisecconds)
+{
+  ignoreUnused(milliseconds);
+  return void;
+}
 /*
  9)
  */
-
+char nextLetter(char c)
+{
+  ignoreUnused(c);
+  return {};
+}
 /*
  10)
  */
+ double getDistance(double pointA, double pointB)
+ {
+   ignoreUnused(pointA, pointB);
+   return {}
+ }
 
 int main()
 {
@@ -117,24 +185,34 @@ int main()
     rentACar(6, 2); 
     
     //1)
-    
+    playMelody(16, "c", true);
+
     //2)
-    
+    skipRope(1000, 2.6);
+
     //3)
-    
+    int x = add(4, 5);
+
     //4)
-    
+    bool b = greaterThan(5.69, 6.3476);
+
     //5)
-    
+    foo(9.99, "x");
+
     //6)
-    
+    walkToStore(6);
+
     //7)
-    
+    float f = multiply(3.14, 4.23);
+
     //8)
-    
+    sleep(5000);
+
     //9)
-    
+    char c = nextLetter("b");
+
     //10)
+    double d = getDistance(2.456, 10.8);
     
     std::cout << "good to go!" << std::endl;
     return 0;    
