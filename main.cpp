@@ -84,7 +84,7 @@ void variableDeclarations()
     ignoreUnused(b);
     ignoreUnused(c);
 
-    return;
+    
 }
 /*
  10 functions
@@ -101,33 +101,31 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 void playMelody(int steps, char root, bool isMinor = false)
 {
-  ignoreUnused(steps, root, isMinor); FIXME make formatting match Coding Style in Readme.MD
-  return; FIXME don't 'return' if you have no value to return.
+    ignoreUnused(steps, root, isMinor);
 }
 /*
  2)
  */
 void skipRope(int skips, float ropeLength = 3.f, bool reverse = false)
 {
-  ignoreUnused(skips, ropeLength, reverse); FIXME make formatting match Coding Style in Readme.MD
-  return; FIXME don't 'return' if you have no value to return.
+    ignoreUnused(skips, ropeLength, reverse);
 }
 /*
  3)
  */
- int add(int a, int b) FIXME make formatting match Coding Style in Readme.MD
+ int add(int a, int b)
  {
-   ignoreUnused(a, b); FIXME make formatting match Coding Style in Readme.MD
-   return {};
+    ignoreUnused(a, b);
+    return {};
  }
 
 /*
  4)
  */
- bool greaterThan(float a, float b) FIXME make formatting match Coding Style in Readme.MD
+ bool greaterThan(float a, float b)
  {
-   ignoreUnused(a, b); FIXME make formatting match Coding Style in Readme.MD
-   return {};
+    ignoreUnused(a, b);
+    return {};
  }
 
 /*
@@ -135,48 +133,45 @@ void skipRope(int skips, float ropeLength = 3.f, bool reverse = false)
  */
 void foo(double bar, char baz)
 {
-  ignoreUnused(bar, baz); FIXME make formatting match Coding Style in Readme.MD
-  return; FIXME don't 'return' if you have no value to return.
+    ignoreUnused(bar, baz);
 }
 /*
  6)
  */
 void walkToStore(int speed, int store = 0)
 {
-  ignoreUnused(speed, store);
-  return; FIXME don't 'return' if you have no value to return.
+    ignoreUnused(speed, store);
 }
 /*
  7)
  */
 float multiply(float a, float b)
 {
-  ignoreUnused(a, b); FIXME make formatting match Coding Style in Readme.MD
-  return {};
+    ignoreUnused(a, b);
+    return {};
 }
 /*
  8)
  */
 void sleep(int milliseconds)
 {
-  ignoreUnused(milliseconds); FIXME make formatting match Coding Style in Readme.MD
-  return; FIXME don't 'return' if you have no value to return.
+    ignoreUnused(milliseconds);
 }
 /*
  9)
  */
 char nextLetter(char c)
 {
-  ignoreUnused(c); FIXME make formatting match Coding Style in Readme.MD
-  return {};
+    ignoreUnused(c);
+    return {};
 }
 /*
  10)
  */
- double getDistance(double pointA, double pointB) FIXME make formatting match Coding Style in Readme.MD
+ double getDistance(double pointA, double pointB)
  {
-   ignoreUnused(pointA, pointB); FIXME make formatting match Coding Style in Readme.MD
-   return {};
+    ignoreUnused(pointA, pointB);
+    return {};
  }
 
 int main()
