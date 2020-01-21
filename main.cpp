@@ -113,20 +113,20 @@ void skipRope(int skips, float ropeLength = 3.f, bool reverse = false)
 /*
  3)
  */
- int add(int a, int b)
- {
+int add(int a, int b)
+{
     ignoreUnused(a, b);
     return {};
- }
+}
 
 /*
- 4)
- */
- bool greaterThan(float a, float b)
- {
+4)
+*/
+bool greaterThan(float a, float b)
+{
     ignoreUnused(a, b);
     return {};
- }
+}
 
 /*
  5)
@@ -168,11 +168,11 @@ char nextLetter(char c)
 /*
  10)
  */
- double getDistance(double pointA, double pointB)
- {
+double getDistance(double pointA, double pointB)
+{
     ignoreUnused(pointA, pointB);
     return {};
- }
+}
 
 int main()
 {
