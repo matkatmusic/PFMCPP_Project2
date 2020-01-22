@@ -68,23 +68,7 @@ void variableDeclarations()
     char b = 'b';
     char c = 'c';
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(n); FIXME try passing all of your variables to a single call to ignoreUnused. see 95 for an example
-    ignoreUnused(x);
-    ignoreUnused(pi);
-    ignoreUnused(y);
-    ignoreUnused(z);
-    ignoreUnused(t);
-    ignoreUnused(f);
-    ignoreUnused(q);
-    ignoreUnused(d);
-    ignoreUnused(g);
-    ignoreUnused(l);
-    ignoreUnused(a);
-    ignoreUnused(b);
-    ignoreUnused(c);
-
-    
+    ignoreUnused(number, n, x, pi, y, z, t, f, q, d, g, l, a, b, c); //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
