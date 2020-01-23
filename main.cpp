@@ -1,7 +1,9 @@
 #include <iostream>
+#include <array>
 
 template<typename ...T>
 void ignoreUnused(T&&...) { }
+
 
 /*
 Project 2 - Part 1 / 1
@@ -13,17 +15,27 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+// characters:
+ char
+ unsigned char
+ char16_t
+ char32_t
+ // integers:
+ short
+ unsigned short
+ int
+ unsigned int
+ long
+ unsigned long
+ long long
+ unsigned long long
+// floating point numbers:
+float
+double
+long double
+
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
         just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -56,10 +68,36 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int notPi = 3;
+    int numberOfDucks = 7;
+
+    char bestLetter = 'b';
+    char theLetterC = 'c';
+    char thisCanAlsoBecomeAChar = 24;
+
+    double anAmbiguousDouble = 420.69;
+    double lovelyFraction = 1/7;
+    double thatsTooLongForFloat = 1.0000000000000000009;
+
+    float pi = 3.14f;
+    float sampleRate = 44100.0f;
+    float angleDelta = pi * (440.0f / sampleRate);
     
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number);
+    ignoreUnused(notPi);
+    ignoreUnused(numberOfDucks); //passing each variable declared to the ignoreUnused() function
+
+    ignoreUnused(bestLetter);
+    ignoreUnused(theLetterC);
+    ignoreUnused(thisCanAlsoBecomeAChar);
+
+    ignoreUnused(anAmbiguousDouble);
+    ignoreUnused(lovelyFraction);
+    ignoreUnused(thatsTooLongForFloat);
+
+    ignoreUnused(pi);
+    ignoreUnused(sampleRate);
+    ignoreUnused(angleDelta);
 }
 /*
  10 functions
@@ -74,42 +112,88 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void setDuration(double milliseconds)
+{
+  ignoreUnused(milliseconds);
+}
 
 /*
  2)
  */
+float getNextSample()
+{
+  return {};
+}
 
 /*
  3)
  */
+void updateSynthMidiNoteState(int currentMode = 1, int currentChord = 1)
+{
+  ignoreUnused(currentMode);
+  ignoreUnused(currentChord);
+}
 
 /*
  4)
  */
+void setSynthFrequency (int requestedMidiNote = 69) // 
+{
+    ignoreUnused(requestedMidiNote);
+}
 
 /*
  5)
  */
+void createWavetable() {}
 
 /*
  6)
  */
 
+void setOscillatorGain(float gain = 0.0f)
+{
+  ignoreUnused(gain);
+}
+
 /*
  7)
  */
+std::array<std::array<bool, 12>, 7> extractDiatonicScales (std::array<bool, 12> parentScale = {1, 0, 1, 0, 1, 1, 0 ,1, 0, 1 })
+{
+  ignoreUnused(parentScale);
+  return {};
+} 
 
 /*
  8)
  */
+std::array<int, 3> expandTriadVoicing(int midiNoteBottom = 48, int midiNoteMiddle = 52, int midiNoteTop = 55)
+{
+  ignoreUnused(midiNoteBottom);
+  ignoreUnused(midiNoteMiddle);
+  ignoreUnused(midiNoteTop);
+  return {};
+} 
 
 /*
  9)
  */
+bool isMidiNoteDiatonic(int midiNote, std::array<bool, 12> notesInCurrentMode)
+{
+  ignoreUnused(midiNote);
+  ignoreUnused(notesInCurrentMode);
+  return {};
+}
+
 
 /*
  10)
  */
+void initializeDiagram(float radius)
+{
+  ignoreUnused(radius);
+}
 
 int main()
 {
@@ -117,25 +201,41 @@ int main()
     rentACar(6, 2); 
     
     //1)
-    
+    setDuration (100); // milliseconds
+
     //2)
+    float currentSample = getNextSample();
     
     //3)
-    
+    updateSynthMidiNoteState(3, 4); // (mode 1-7, chord 1-7) 
+
     //4)
+    setSynthFrequency(48);
     
     //5)
+    createWavetable();
     
     //6)
-    
+    setOscillatorGain(0.5f);
+
     //7)
-    
+    std::array<bool, 12> melodicMinor = {1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1}; // 1, 2, b3, 4, 5, 6, 7
+    std::array<std::array<bool, 12>, 7> melodicMinorModes = extractDiatonicScales(melodicMinor);
+
     //8)
+    std::array<int, 3> expandedTriad = expandTriadVoicing(48, 52, 55); // returns 48, 55, 64;
     
     //9)
+    bool isDbDiatonicToFifthModeOfMelodicMinor = isMidiNoteDiatonic(49, melodicMinorModes.at(5)); // no it's not.
     
     //10)
-    
+    initializeDiagram(600);
+
+    // I know this wasn't in the instructions, but I felt that the functions I came up with made more sense when assigning to a variable.  Let me know if that's ok!
+    ignoreUnused(currentSample);                         // (2)
+    ignoreUnused(expandedTriad);                         // (8)
+    ignoreUnused(isDbDiatonicToFifthModeOfMelodicMinor); // (9)
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
