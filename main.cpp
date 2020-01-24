@@ -76,8 +76,8 @@ void variableDeclarations()
     char theLetterC = 'c';
     char thisCanAlsoBecomeAChar = 24;
 
+    double lovelyFraction = 1.0/7.0; // fixed!  I do have a question though... Does the rvalue of this expression (1.0/7.0) use floating point or double precision?  Also, if it was (1.0f/7.0f) the fraction would be evaulated as a float, then converted to a double when it's assigned to the variable, right?  
     double anAmbiguousDouble = 420.69;
-    double lovelyFraction = 1/7; FIXME this is integer division, not floating point division
     std::cout << lovelyFraction << std::endl;
     double thatsTooLongForFloat = 1.0000000000000000009;
 
