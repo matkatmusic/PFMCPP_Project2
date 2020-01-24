@@ -64,6 +64,7 @@ long double
  */
 
 //2)
+#include <iostream>
 void variableDeclarations()
 {
     //example:
@@ -76,7 +77,8 @@ void variableDeclarations()
     char thisCanAlsoBecomeAChar = 24;
 
     double anAmbiguousDouble = 420.69;
-    double lovelyFraction = 1/7;
+    double lovelyFraction = 1/7; FIXME this is integer division, not floating point division
+    std::cout << lovelyFraction << std::endl;
     double thatsTooLongForFloat = 1.0000000000000000009;
 
     float pi = 3.14f;
@@ -236,6 +238,7 @@ int main()
     ignoreUnused(expandedTriad);                         // (8)
     ignoreUnused(isDbDiatonicToFifthModeOfMelodicMinor); // (9)
 
+    variableDeclarations();
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
