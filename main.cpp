@@ -76,7 +76,7 @@ void variableDeclarations()
     char theLetterC = 'c';
     char thisCanAlsoBecomeAChar = 24;
 
-    double lovelyFraction = 1.0/7.0; // fixed!  I do have a question though... Does the rvalue of this expression (1.0/7.0) use floating point or double precision?  Also, if it was (1.0f/7.0f) the fraction would be evaulated as a float, then converted to a double when it's assigned to the variable, right?  
+    double lovelyFraction = 1.0/7.0; // thank you, that makes sense
     double anAmbiguousDouble = 420.69;
     std::cout << lovelyFraction << std::endl;
     double thatsTooLongForFloat = 1.0000000000000000009;
@@ -116,7 +116,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 void setDuration(double milliseconds)
 {
-  ignoreUnused(milliseconds);
+    ignoreUnused(milliseconds);
 }
 
 /*
@@ -124,7 +124,7 @@ void setDuration(double milliseconds)
  */
 float getNextSample()
 {
-  return {};
+    return {};
 }
 
 /*
@@ -132,8 +132,8 @@ float getNextSample()
  */
 void updateSynthMidiNoteState(int currentMode = 1, int currentChord = 1)
 {
-  ignoreUnused(currentMode);
-  ignoreUnused(currentChord);
+    ignoreUnused(currentMode);
+    ignoreUnused(currentChord);
 }
 
 /*
@@ -155,7 +155,7 @@ void createWavetable() {}
 
 void setOscillatorGain(float gain = 0.0f)
 {
-  ignoreUnused(gain);
+    ignoreUnused(gain);
 }
 
 /*
@@ -163,8 +163,8 @@ void setOscillatorGain(float gain = 0.0f)
  */
 std::array<std::array<bool, 12>, 7> extractDiatonicScales (std::array<bool, 12> parentScale = {1, 0, 1, 0, 1, 1, 0 ,1, 0, 1 })
 {
-  ignoreUnused(parentScale);
-  return {};
+    ignoreUnused(parentScale);
+    return {};
 } 
 
 /*
@@ -172,10 +172,10 @@ std::array<std::array<bool, 12>, 7> extractDiatonicScales (std::array<bool, 12> 
  */
 std::array<int, 3> expandTriadVoicing(int midiNoteBottom = 48, int midiNoteMiddle = 52, int midiNoteTop = 55)
 {
-  ignoreUnused(midiNoteBottom);
-  ignoreUnused(midiNoteMiddle);
-  ignoreUnused(midiNoteTop);
-  return {};
+    ignoreUnused(midiNoteBottom);
+    ignoreUnused(midiNoteMiddle);
+    ignoreUnused(midiNoteTop);
+    return {};
 } 
 
 /*
@@ -183,9 +183,9 @@ std::array<int, 3> expandTriadVoicing(int midiNoteBottom = 48, int midiNoteMiddl
  */
 bool isMidiNoteDiatonic(int midiNote, std::array<bool, 12> notesInCurrentMode)
 {
-  ignoreUnused(midiNote);
-  ignoreUnused(notesInCurrentMode);
-  return {};
+    ignoreUnused(midiNote);
+    ignoreUnused(notesInCurrentMode);
+    return {};
 }
 
 
@@ -194,7 +194,7 @@ bool isMidiNoteDiatonic(int midiNote, std::array<bool, 12> notesInCurrentMode)
  */
 void initializeDiagram(float radius)
 {
-  ignoreUnused(radius);
+    ignoreUnused(radius);
 }
 
 int main()
