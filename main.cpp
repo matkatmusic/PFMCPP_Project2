@@ -15,17 +15,13 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+      Integer int
+ 	    Character char
+ 	    Boolean bool
+ 	    Floating Point float
+ 	    Double Floating Point double
+      Void void
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -56,10 +52,27 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int age = 2;
+    int year = 2020;
+    int days = 30;
+
+    char firstInitial = 'n';
+    char lastInitial = 'l';
+    char middleInitial = 's';
+
+    bool isMale = true;
+    bool isOld = true;
+    bool isHansome = false;
+
+    double gradeDouble = 95.5;
+    double priceDouble = 120.55;
+    double heightDouble = 5000.0123;
+
+    float gradeFloat = 95.5f;
+    float priceFloat = 120.55f;
+    float heightFloat = 5000.0123f;
     
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, year, days, firstInitial, lastInitial, middleInitial, isMale, isOld, isHansome, gradeDouble, priceDouble, heightDouble, gradeFloat, priceFloat, heightFloat); //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
@@ -69,47 +82,87 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-} 
-
+}
 /*
  1)
  */
-
+int getAge(int age)
+{
+    ignoreUnused(age); 
+    return {};
+}
 /*
  2)
  */
-
+char getName(char lname, char fname)
+{
+    ignoreUnused(lname, fname);
+    return {};
+}
 /*
  3)
  */
-
+bool getGender(bool isMale)
+{
+    ignoreUnused(isMale);
+    return {};
+}
 /*
  4)
  */
-
+int getSocialNumber(int ssn)
+{
+    ignoreUnused(ssn);
+    return {};
+}
 /*
  5)
  */
-
+char getZipcode(int zipcode)
+{
+    ignoreUnused(zipcode);
+    return {};
+}
 /*
  6)
  */
-
+void setUserParameter(int age, bool gender, int zipcode)
+{
+    ignoreUnused(age, gender, zipcode); 
+}
 /*
  7)
  */
-
+float getTotalEquity(float realEstateEquity, float stockEquity)
+{
+    ignoreUnused(realEstateEquity, stockEquity);
+    return {};
+}
 /*
  8)
  */
-
+bool loanApprove(int age, float equity, char jobType)
+{
+    ignoreUnused(age, equity, jobType);
+    return {};
+}
 /*
  9)
  */
-
+double getInterestRate(int age, float equity, char jobType, bool loanApproved = 0)
+{
+    ignoreUnused(age, equity, jobType, loanApproved); 
+    return {};
+}
 /*
  10)
  */
+int satisfactionLevel(bool loanApproved, double interestRate)
+{
+    ignoreUnused(loanApproved, interestRate); 
+    return {};
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -131,27 +184,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto userAge = getAge(100);
     //2)
-    
+    auto userName = getName('l', 'n');
     //3)
-    
+    auto userGender = getGender(true);
     //4)
-    
+    auto userSsn = getSocialNumber(123456789);
     //5)
-    
+    auto userZip = getZipcode(10001);
     //6)
-    
+    setUserParameter(11, true, 12341);
     //7)
-    
+    auto equity = getTotalEquity(0.0f, 3000.45f);
     //8)
-    
+    auto loanApproved = loanApprove(89, 33000, 'A');
     //9)
-    
+    auto interestRate = getInterestRate(44, 15900000, 'E', 1);
     //10)
+    auto customerSatisfation = satisfactionLevel(true, 3.76);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, userAge, userName, userGender, userSsn, userZip, equity, loanApproved, interestRate, customerSatisfation);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
