@@ -17,12 +17,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
  
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -56,10 +56,56 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
+    int a = 1;
+    int b = 2;
+    int c = 3;
+
+    float myFloat = 1.2f;
+    float pi = 3.14159f;
+    float randomNumber = 7.34f;
+
+    bool checka = false;
+    bool checkb = false;
+    bool checkc = false;
+
+    double myDouble1 = 1.0;
+    double myDouble2 = 2.00;
+    double myDouble3 = 3.12;
+
+    char firstLetter = 'a';
+    char lastLetter = 's';
+    char middleInitial = 'r';
+
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    // ints
+    ignoreUnused(a);
+    ignoreUnused(b);
+    ignoreUnused(c);
+
+    // floats
+    ignoreUnused(myFloat);
+    ignoreUnused(pi);
+    ignoreUnused(randomNumber);
+
+    // bools
+    ignoreUnused(checka);
+    ignoreUnused(checkb);
+    ignoreUnused(checkc);
+
+    // doubles
+    ignoreUnused(myDouble1);
+    ignoreUnused(myDouble2);
+    ignoreUnused(myDouble3);
+
+    // chars
+    ignoreUnused(firstLetter);
+    ignoreUnused(lastLetter);
+    ignoreUnused(middleInitial);
+
+
+
 }
 /*
  10 functions
@@ -74,42 +120,103 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int guessTheNumber(int theNumber, int numberOfTries = 3)
+{
+    ignoreUnused(theNumber, numberOfTries);
+    return {};
+}
 
 /*
  2)
  */
 
+ float doSomeMath(int smallNumber, int bigNumber, float coursePi = 3.14f)
+ {
+     ignoreUnused(smallNumber, bigNumber, coursePi);
+     return {};
+ }
+
 /*
  3)
  */
+
+ bool checkTheStatus(bool currentStatus)
+ {
+     ignoreUnused(currentStatus);
+     return {};
+ }
 
 /*
  4)
  */
 
+ void questionExistence(int age, int midlifeCrisis = 40)
+ {
+     ignoreUnused(age, midlifeCrisis);
+ }
+
 /*
  5)
  */
+
+ double calculateTheThing(float thing1, float thing2, float thing3)
+ {
+     ignoreUnused(thing1, thing2, thing3);
+     return {};
+ }
 
 /*
  6)
  */
 
+ int basicAdding(int number1, int number2)
+ {
+    int sum = number1 + number2;
+    return sum;
+ }
+
 /*
  7)
  */
+ bool greaterThan(int value1, int value2 = 0)
+ {
+     if (value1 > value2)
+     {
+         return true;
+     }
+     else
+     {
+         return false;
+     }
+ }
 
 /*
  8)
  */
 
+ int expiredFood(int daysSince = 0)
+ {
+     ignoreUnused(daysSince);
+     return {};
+ }
+
 /*
  9)
  */
+ bool statusFlag(bool flagA, bool flagB)
+ {
+     ignoreUnused(flagA, flagB);
+     return {};
+ }
 
 /*
  10)
  */
+ float integrateArea(int startValue = 0, int endValue = 28)
+ {
+     ignoreUnused(startValue, endValue);
+     return {};
+ }
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -131,24 +238,44 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    guessTheNumber(7, 3);
+    ignoreUnused(guessTheNumber);
     
     //2)
+    doSomeMath(1, 300, 3.14f);
+    ignoreUnused(doSomeMath);
     
     //3)
-    
+    checkTheStatus(1);
+    ignoreUnused(checkTheStatus);
+
     //4)
+    questionExistence(28, 45);
+    ignoreUnused(questionExistence);
     
     //5)
+    calculateTheThing(4.56f, 3.156f, 6.3214554f);
+    ignoreUnused(calculateTheThing);
     
     //6)
+    auto sum = basicAdding(3, 7);
+    std::cout << "The sum is: " << sum << std::endl;
     
     //7)
+    auto greaterThanTest = greaterThan(5, 1);
+    std::cout << "1 is a win: Status = " << greaterThanTest << "\n\n\n";
     
     //8)
+    expiredFood(365);
+    ignoreUnused(expiredFood);
     
     //9)
+    statusFlag(0, 1);
+    ignoreUnused(statusFlag);
     
     //10)
+    integrateArea(0, 28);
+    ignoreUnused(integrateArea);
     
     
     ignoreUnused(carRented);
