@@ -103,11 +103,11 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
- int calculate2Distance(int xPosition = 0, int yPosition = 0)
- {
-     ignoreUnused(xPosition, yPosition);
-     return {};
- }
+int calculate2Distance(int xPosition = 0, int yPosition = 0)
+{
+    ignoreUnused(xPosition, yPosition);
+    return {};
+}
 
 /*
  2)
@@ -120,26 +120,26 @@ float calculateResistor(double current, double voltage, bool warningOnMaxVoltage
 /*
  3)
  */
- void displayAge(int age)
- {
-     ignoreUnused(age);
- }
+void displayAge(int age)
+{
+    ignoreUnused(age);
+}
 
 /*
  4)
  */
- void setSpeed(int speed, bool blockAtMaxSpeedLimit)
- {
-     ignoreUnused(speed, blockAtMaxSpeedLimit);
- }
+void setSpeed(int speed, bool blockAtMaxSpeedLimit)
+{
+    ignoreUnused(speed, blockAtMaxSpeedLimit);
+}
 
 /*
  5)
  */
- void printLetters(char firstLetter, char secondLetter)
- {
-     ignoreUnused(firstLetter, secondLetter);
- }
+void printLetters(char firstLetter, char secondLetter)
+{
+    ignoreUnused(firstLetter, secondLetter);
+}
 
 /*
  6)
