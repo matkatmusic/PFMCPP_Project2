@@ -202,7 +202,7 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto calculate2Distance(25); 
+    auto distance = calculate2Distance(25); 
     
     //2)
     auto resistor =  calculateResistor(12.0, 5.2, true);
@@ -224,15 +224,11 @@ int main()
     auto f = caclulateFactorial(125);
     
     ignoreUnused(
-        carRented, 
-        calculate2Distance, 
+        carRented,  
+        distance,
         resistor,
-        displayAge, 
-        setSpeed, 
-        printLetters, 
         sum, 
         time, 
-        forecastWeather,
         price,
         f
     );
