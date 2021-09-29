@@ -16,14 +16,15 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ short
+ int
+ float
+ double
+ long
+ char
+
+
+
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -60,9 +61,32 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    short s_1 = 1;
+    short s_2 = 2;
+    short s_3 = 3;
+
+    int i_1 = 1;
+    int i_2 = 2;
+    int i_3 = 3;
+
+    float f_1 = 1.0;
+    float f_2 = 2.0;
+    float f_3 = 3.0;
+
+    double d_1 = 1;
+    double d_2 = 2;
+    double d_3 = 3;
+
+    long l_1 = 1;
+    long l_2 = 2;
+    long l_3 = 3;
+
+    char c_1 = 'a';
+    char c_2 = 'b';
+    char c_3 = 'c';
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, s_1, s_2, s_3, i_1, i_2, i_3, f_1, f_2, f_3, d_1, d_2, d_3, l_1, l_2, l_3, c_1, c_2, c_3); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +103,84 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+ int calculate2Distance(int xPosition = 0, int yPosition = 0)
+ {
+     ignoreUnused(xPosition, yPosition);
+     return {};
+ }
 
 /*
  2)
  */
-
+float calculateResistor(double current, double voltage, bool warningOnMaxVoltage = true)
+{
+    ignoreUnused(current, voltage, warningOnMaxVoltage);
+    return {};
+}
 /*
  3)
  */
+ void displayAge(int age)
+ {
+     ignoreUnused(age);
+ }
 
 /*
  4)
  */
+ void setSpeed(int speed, bool blockAtMaxSpeedLimit)
+ {
+     ignoreUnused(speed, blockAtMaxSpeedLimit);
+ }
 
 /*
  5)
  */
+ void displayFullName(const char *firstName, const char *lastName)
+ {
+     ignoreUnused(firstName, lastName);
+ }
 
 /*
  6)
  */
-
+double computeSum(double a, double b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  7)
  */
+double caclulateTimeDilutionInMotion(double speedOfObject, int t_0, long speedOfLight = 15000000) 
+{
+    ignoreUnused(speedOfObject, t_0, speedOfLight);
+    return {};
+}
 
 /*
  8)
  */
+void forecastWeather (int speedWind, int rainHeight, int sunLevel) {
+    ignoreUnused(speedWind, rainHeight, sunLevel);
+}
 
 /*
  9)
  */
-
+int computeHousePrice(int numberOfBedroom, int numberOfBathroom, int surface)
+{
+    ignoreUnused(numberOfBedroom, numberOfBathroom, surface);
+    return {};
+}
 /*
  10)
  */
-
+long caclulateFactorial(long number) 
+{
+    ignoreUnused(number);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +201,40 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto calculate2Distance(25); 
     
     //2)
-    
+    auto resistor =  calculateResistor(12.0, 5.2, true);
     //3)
-    
+    displayAge(25);
     //4)
-    
+    setSpeed(150, true);
     //5)
-    
+    displayFullName("Bob", "Sponge");
     //6)
-    
+    auto sum = computeSum(12, 2525245345);
     //7)
-    
+    auto time = caclulateTimeDilutionInMotion(152, 50);
     //8)
-    
+    forecastWeather(15, 25, 96);
     //9)
-    
+    auto price = computeHousePrice(5, 3, 250);
     //10)
+    auto f = caclulateFactorial(125);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(
+        carRented, 
+        calculate2Distance, 
+        resistor,
+        displayAge, 
+        setSpeed, 
+        displayFullName, 
+        sum, 
+        time, 
+        forecastWeather,
+        price,
+        f
+    );
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
