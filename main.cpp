@@ -69,13 +69,13 @@ void variableDeclarations()
     int i_2 = 2;
     int i_3 = 3;
 
-    float f_1 = 1.0;
-    float f_2 = 2.0;
-    float f_3 = 3.0;
+    float f_1 = 1.0f;
+    float f_2 = 2.0f;
+    float f_3 = 3.0f;
 
-    double d_1 = 1;
-    double d_2 = 2;
-    double d_3 = 3;
+    double d_1 = 1.0;
+    double d_2 = 2.0;
+    double d_3 = 3.0;
 
     long l_1 = 1;
     long l_2 = 2;
@@ -136,9 +136,9 @@ float calculateResistor(double current, double voltage, bool warningOnMaxVoltage
 /*
  5)
  */
- void displayFullName(const char *firstName, const char *lastName)
+ void printLetters(char firstLetter, char secondLetter)
  {
-     ignoreUnused(firstName, lastName);
+     ignoreUnused(firstLetter, secondLetter);
  }
 
 /*
@@ -161,7 +161,8 @@ double caclulateTimeDilutionInMotion(double speedOfObject, int t_0, long speedOf
 /*
  8)
  */
-void forecastWeather (int speedWind, int rainHeight, int sunLevel) {
+void forecastWeather (int speedWind, int rainHeight, int sunLevel) 
+{
     ignoreUnused(speedWind, rainHeight, sunLevel);
 }
 
@@ -210,7 +211,7 @@ int main()
     //4)
     setSpeed(150, true);
     //5)
-    displayFullName("Bob", "Sponge");
+    printLetters('A', 'B');
     //6)
     auto sum = computeSum(12, 2525245345);
     //7)
@@ -228,7 +229,7 @@ int main()
         resistor,
         displayAge, 
         setSpeed, 
-        displayFullName, 
+        printLetters, 
         sum, 
         time, 
         forecastWeather,
