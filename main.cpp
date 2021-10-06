@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ float
+ int
+ bool
+ char
+ long int
+ short int
  
  
  
@@ -58,11 +58,35 @@ video: Chapter 2 - Part 3
 void variableDeclarations()
 {
     //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int number1 = 3;
+    int number2 = 4;
+    int number3 = 5;
+
+    float decimal1 = 0.0f;
+    float decimal2 = 3.45f;
+    float decimal3 = 12.21f;
+
+    char letter1 = 'A';
+    char letter2 = 'B';
+    char letter3 = 'C';
+
+    short int shortNumber1 = 7;
+    short int shortNumber2 = 2;
+    short int shortNumber3 = 11;
+
+    long int longNumber1 = 17;
+    long int longNumber2 = 12;
+    long int longNumber3 = 111;
+
+    double bool1 = true;
+    double bool2 = false;
+    double bool3 = false;
+
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number1,number2,number3,decimal1,decimal2,decimal3,letter1,letter2,letter3,shortNumber1,shortNumber2,shortNumber3,longNumber1,longNumber2,longNumber3,bool1,bool2,bool3); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -76,45 +100,101 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
+int SellItem(int itemIdx, int itemValue);
 /*
  1)
  */
+int SellItem(int itemIdx = 12, int itemValue = 100)
+{
+    ignoreUnused(itemIdx, itemValue);
+    return{};
+}
 
+float CollectInterest(float moneyAmount, float interestPercent, int accountNumber);
 /*
  2)
  */
+float CollectInterest(float moneyAmount, float interestAmount= 0.075f, int accountNumber = 38742156 )
+{
+    ignoreUnused(moneyAmount, interestAmount, accountNumber);
+    return{};
+}
 
+void SaveMidiNoteToList(int midiChannel, int notePitch, int noteVelocity, float timePrecise);
 /*
  3)
  */
+void SaveMidiNoteToList(int midiChannel, int notePitch, int noteVelocity, float timePrecise)
+{
+    ignoreUnused(midiChannel, notePitch, noteVelocity, timePrecise);
+}
 
+int ClampInt(int number);
 /*
  4)
  */
+int ClampInt(int number)
+{
+    ignoreUnused(number);
+    return{};
+}
 
+float ClampFloat(float number);
 /*
  5)
  */
+float ClampFloat(float number = 354.12f)
+{
+    ignoreUnused(number);
+    return{};
+}
 
+bool PlaySound(float pitch, float duration);
 /*
  6)
  */
+bool PlaySound(float pitch, float duration = 1.3f)
+{
+    ignoreUnused(pitch, duration);
+    return{};
+}
 
+void LogButtonPress(char button, float timePrecise);
 /*
  7)
  */
+void LogButtonPress(char button = 'B', float timePrecise = 1443.1534f)
+{
+    ignoreUnused(button, timePrecise);
+}
 
+void SaveTimeStamp(float timePrecise);
 /*
  8)
  */
+void SaveTimeStamp(float timePrecise = 4598.2345f)
+{
+    ignoreUnused(timePrecise);
+}
 
+void Run(bool startWithLeftFoot, int speed, float direction);
 /*
  9)
  */
+void Run(bool startWithLeftFoot = false, int speed = 4, float direction = 43.1f)
+{
+    ignoreUnused(startWithLeftFoot, speed, direction);
+}
 
+int BuyItem(int itemIdx, int playerMoneyAmount);
 /*
  10)
  */
+int BuyItem(int itemIdx, int playerMoneyAmount)
+{
+    ignoreUnused(itemIdx, playerMoneyAmount);
+    return{};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -136,27 +216,38 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto moneyReturned = SellItem(4253, 230);
     
     //2)
+    auto interestCollected = CollectInterest(6400, 0.055f, 1457457 );
     
     //3)
+    SaveMidiNoteToList(4, 75, 121, 4356.1536f);
     
     //4)
+    auto clampedInt = ClampInt(5788);
     
     //5)
+    auto clampedFloat = ClampFloat(5.65f);
     
     //6)
+    auto managedToPlaySound = PlaySound(34.52f, 1.3f);
     
     //7)
+    LogButtonPress('V', 4534.2355f);
     
     //8)
-    
+    SaveTimeStamp(3456.2344f);
+
     //9)
-    
+    Run(true, 50, 90.0f);
+
     //10)
+    auto boughtItemIdx = BuyItem(562, 6000);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, moneyReturned, interestCollected, clampedInt, clampedFloat, managedToPlaySound, boughtItemIdx);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
