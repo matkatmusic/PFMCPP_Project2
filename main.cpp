@@ -17,11 +17,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of the 6 major primitive types available in C++  here:
  
  
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -30,7 +31,7 @@ video: Chapter 2 - Part 3
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
         - 'void' is a return type. you do not need to declare 3 variables of type 'void'.
     b) at the end of the function, call ignoreUnused once and pass all of your variables to it. see line 71 for an example
- 
+
 3) Declare 10 free functions
     each declaration should have a random number of parameters in the function parameter list.
     When naming your parameters, choose names that are relevant to the task implied by the function's name.
@@ -59,10 +60,29 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    float aa = 1.2f;
+    float ab = 2.2f;
+    float ac = 3.2f;
+    bool aaa = true;
+    bool aab = true;
+    bool aac = false;
+    double aba = 1.111;
+    double abb = 2.111;
+    double abc = 3.111;
+    char ba = 'a';
+    char bb = 'b';
+    char bc = 'c';
+    unsigned int ca = 0;
+    unsigned int cb = 1;
+    unsigned int cc = 2;
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, a, b, c, aa, ab, ac, aaa, aab, aab, aac, aba, abb, abc, ba, bb, bc, ca, cb, cc); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,42 +99,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+ void updateWallet(float currencyAmount, int walletID = 1425354)
+ {
+     ignoreUnused(currencyAmount, walletID);
+ }
 
 /*
  2)
  */
+ void moveCharacter(int direction, int speed = 1)
+ {
+     ignoreUnused(direction, speed);
+ }
 
 /*
  3)
  */
+float convertCurrency(float currencyAmount, float exchangeRate = 1.0f)
+{
+    ignoreUnused(currencyAmount, exchangeRate);
+    return {};
+}
 
 /*
  4)
  */
+ void updateBulbState(bool onOff, int bulbID = 134235)
+ {
+     ignoreUnused(onOff, bulbID);
+ }
 
 /*
  5)
  */
+bool applyCarBrake(int networkState, bool collisionImminent = false)
+{
+    ignoreUnused(networkState, collisionImminent);
+    return {};
+}
+
 
 /*
  6)
  */
+bool shouldBuyBitcoin(bool bitcoinSupplyIsFixed = true)
+{
+    ignoreUnused(bitcoinSupplyIsFixed);
+    return {};
+}
+
 
 /*
  7)
  */
+float calculateHyperInflationProbability(float moneySupply, float printingRate, bool bayesianPriors = true)
+{
+    ignoreUnused(moneySupply, printingRate, bayesianPriors);
+    return {};
+}
+
 
 /*
  8)
  */
+bool goodDayForFishing(float rainProbability, float temperatureF = 50.0f)
+{
+    ignoreUnused(rainProbability, temperatureF);
+    return {};
+}
 
 /*
  9)
  */
+void updateNetworkState(float gradients, float loss = 1.0f)
+{
+    ignoreUnused(gradients, loss);
+}
 
 /*
  10)
  */
+bool calculateCodingValue(bool answer = true)
+{
+    ignoreUnused(answer);
+    return {};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -136,27 +205,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    updateWallet(25.43f, 4425354);
     
     //2)
-    
+    moveCharacter(1, 2);
+
     //3)
-    
+    auto convertedCurrency = convertCurrency(254.33f, 1.24f);
+
     //4)
-    
+    updateBulbState(true, 134233);
+
     //5)
-    
+    auto applyBrake = applyCarBrake(52453464, false);
+
     //6)
-    
+    auto buyBitcoin = shouldBuyBitcoin(true);
+
     //7)
-    
+    auto hyperInflationProbability  = calculateHyperInflationProbability(2453436456, .2f, true);
+
     //8)
-    
+    auto shouldFish = goodDayForFishing(.1f);
+
     //9)
-    
+    updateNetworkState(0.2f);
+
     //10)
+    auto isCodingUseful = calculateCodingValue();
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, convertedCurrency, applyBrake, buyBitcoin, hyperInflationProbability, shouldFish, isCodingUseful);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
