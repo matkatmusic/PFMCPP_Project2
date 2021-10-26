@@ -16,15 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
+ 1. unsigned int
+ 2. char
+ 3. int
+ 4. float
+ 5. bool
+ 6. double
  
- 
- 
- 
- 
- 
- 
- 
- 
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -59,10 +58,38 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
+    // "int" declarations
+    int negInt = -2;
+    int largeInt = 200000;
+    int newInt = 4;
+
+    // "double" declarations
+    double milesTraveled = 500.345;
+    double lightYears = 300001.56783;
+    double randomMathConstant = 6.023674562;
+
+    // "float" declarations
+    float pi = 3.14f;
+    float change = 20.45f;
+    float pounds = 135.4f;
+
+    // "char" declarations
+    char letterC = 'C';
+    char letterB = 'B';
+    char letterA = 'A';
+
+    // "bool" declarations
+    bool isHuman = true;
+    bool isLearning = true;
+    bool lovesCoding = true;
+
+    // "unsigned int" declarations
+    unsigned int salary= 34456;
+    unsigned int kilometers = 1234;
+    unsigned int circumference = 9876;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, negInt, largeInt, newInt, milesTraveled, lightYears, randomMathConstant, pi, change, pounds, letterC, letterB, letterA, isHuman, isLearning, lovesCoding, salary, kilometers, circumference); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +106,82 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+char vehicleType(bool truck, int numOfTires = 4, int year = 2000) 
+{ 
+    ignoreUnused(truck, numOfTires, year); 
+    return {};
+} 
 /*
  2)
  */
-
+float planeDistanceLeft(float milesTraveled, char planeName, bool badWeather = false)  
+{ 
+    ignoreUnused(milesTraveled, planeName, badWeather); 
+    return {};
+} 
 /*
  3)
  */
-
+bool stormApproaching(int rainLevel, bool wind =  false, bool darkClouds = false)  
+{ 
+    ignoreUnused(rainLevel, wind, darkClouds); 
+    return {}; 
+} 
 /*
  4)
  */
-
+int areaOfRectangle(int length = 0, int width = 0) 
+{ 
+    ignoreUnused(length, width);
+    return {}; 
+} 
 /*
  5)
  */
-
+void whereIsWaldo(int numberOfNonWaldos = 200, int numberOfWaldos = 1) 
+{ 
+    ignoreUnused(numberOfNonWaldos, numberOfWaldos); 
+} 
 /*
  6)
  */
-
+double circumference(double radius, double pi = 3.14)  
+{ 
+    ignoreUnused(radius, pi);
+    return {}; 
+} 
 /*
  7)
  */
-
+bool buyHouse(bool goodNeighborhood, float marketValue, float downPayment = 10000.0)  
+{ 
+    ignoreUnused(downPayment, goodNeighborhood, marketValue);
+    return {}; 
+} 
 /*
  8)
  */
-
+bool mowLawn(int cost, bool grassHigh = true, float amountToSpend = 50.50) 
+{ 
+    ignoreUnused(cost, grassHigh, amountToSpend); 
+    return {};
+} 
 /*
  9)
  */
-
+unsigned int cleanHouseCost(unsigned int squareFootage, bool standardClean = true, bool cleanBlinds = false)  
+{ 
+    ignoreUnused(squareFootage, standardClean, cleanBlinds);
+    return {};
+} 
 /*
  10)
  */
-
+double stockReturn(float stockPrice, int profitMargins, bool stockIncrease = false) 
+{ 
+    ignoreUnused(stockPrice, profitMargins, stockIncrease);
+    return {};
+} 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +202,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto vehicle = vehicleType(true);
     //2)
-    
+    auto planeDistance = planeDistanceLeft(300.56f, 'B', true);
     //3)
-    
+    auto storm = stormApproaching(4, false, true);
     //4)
-    
+    auto area =  areaOfRectangle(5, 6);
     //5)
-    
+    whereIsWaldo();
     //6)
-    
+    auto circleCircum = circumference(5.6);
     //7)
-    
+    auto houseStatus = buyHouse(true, 153000.75);
     //8)
-    
+    auto hireLandscaper = mowLawn(100, false, 30.50);
     //9)
-    
+    auto getCleaners =  cleanHouseCost(1580);  
     //10)
+    auto sellStock = stockReturn(900.56f, 100, true); 
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, vehicle, planeDistance, storm, area, circleCircum, houseStatus, hireLandscaper, getCleaners, sellStock);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
