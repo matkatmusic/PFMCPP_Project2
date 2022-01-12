@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ 1. bool
+ 2. char
+ 3. int
+ 4. float
+ 5. double
+ 6. void 
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -59,13 +57,24 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int sides = 3;
+    int size = 3;
+    float diagonal = 4.5;
+    float diameter = 6.52;
+    float ratio = 3.26;
+    double pi = 3.141592653589;
+    double cmat = 0.1357908642;
+    double compl = -75.14825936040841360;
+    bool triangular = false;
+    bool circular = true;
+    bool spherical = false;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, sides, size, diagonal, diameter, ratio, pi, cmat, compl, triangular, circular, spherical); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
+ 3)
  10 functions
  example:
  note: this example shows the result after completing steps 3-8
@@ -79,42 +88,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int openDoor(bool whoIS, int howMany)
+{
+    ignoreUnused(whoIS, howMany);
+    return{};
+}
+
 
 /*
  2)
  */
+int useComputer(bool available, int time, char application, char kindPC)
+{
+    ignoreUnused(available, time, application, kindPC);
+    return{};
+}
 
 /*
  3)
  */
-
+char letterRunner(bool importance, bool priority, char whosFor, char whosDelivering)
+{
+    ignoreUnused(importance, priority, whosFor, whosDelivering);
+    return{};
+}
 /*
  4)
  */
-
+bool simpleCarInspection(bool hasLiquids, bool tiresAir, bool cockpitMessages)
+{
+    ignoreUnused(hasLiquids, tiresAir, cockpitMessages);
+    return{};
+}
 /*
  5)
  */
+bool playInstrument(bool instrumentIsTuned, char progrNotes, char rythm)
+{
+    ignoreUnused(instrumentIsTuned, progrNotes, rythm);
+    return{};
+}
 
 /*
  6)
  */
+int refuelGas(bool hasMessage, float quantity, int kind)
+{
+    ignoreUnused(hasMessage, quantity, kind);
+    return{};
+}
 
 /*
  7)
  */
+bool buyFruit(bool fresh, int variety, float affordable)
+{
+    ignoreUnused(fresh, variety, affordable);
+    return{};
+}
 
 /*
  8)
  */
+bool goParty(bool withFriends, char where, char dress)
+{
+    ignoreUnused(withFriends, where, dress);
+    return{};
+}
 
 /*
  9)
  */
+char instrumRecord(bool percussion, bool winds, bool strings)
+{
+    ignoreUnused(percussion, winds, strings);
+    return{};
+}
 
 /*
  10)
  */
+char petDailyCare(char kind, char size, int age)
+{
+    ignoreUnused(kind, size, age);
+    return{};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -136,27 +194,36 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto safeToOpen = openDoor(true, 1);
     
     //2)
+    auto borrowedPC = useComputer(true, 60, "Do presentation", "Desktop");
     
     //3)
-    
+    auto delivery = letterRunner(true, true, "Boss", "SpeedRunner");
+
     //4)
+    auto carDisposition = simpleCarInspection(true, true, false);
     
     //5)
+    auto startNextSong = playInstrument(true, "E major", "Rock");
     
     //6)
+    auto canPark = refuelGas(true, 5.5, 98);
     
     //7)
+    auto todayFruitSalad = buyFruit(true, 3, true);
     
     //8)
+    auto wkGoodTime = goParty(true, "Ibiza", "Relaxed");
     
     //9)
+    auto micSelection = instrumRecord(true, false, false);
     
     //10)
+    auto foodSelector = petDailyCare("Dog", "Big", "5");
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, borrowedPC, safeToOpen, borrowedPC, delivery, carDisposition, startNextSong, canPark, todayFruitSalad, wkGoodTime, micSelection, foodSelector);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
