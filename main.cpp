@@ -68,9 +68,12 @@ void variableDeclarations()
     bool triangular = false;
     bool circular = true;
     bool spherical = false;
+    char musicalNote = 'E';
+    char grade = 'A';
+    char clothSize = 'S';
 
     
-    ignoreUnused(number, sides, size, diagonal, diameter, ratio, pi, cmat, comp, triangular, circular, spherical); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, sides, size, diagonal, diameter, ratio, pi, cmat, comp, triangular, circular, spherical, musicalNote, grade, clothSize); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
