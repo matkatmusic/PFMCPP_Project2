@@ -59,18 +59,18 @@ void variableDeclarations()
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     int sides = 3;
     int size = 3;
-    float diagonal = 4.5;
-    float diameter = 6.52;
-    float ratio = 3.26;
+    float diagonal = 4.5f;
+    float diameter = 6.52f;
+    float ratio = 3.26f;
     double pi = 3.141592653589;
     double cmat = 0.1357908642;
-    double compl = -75.14825936040841360;
+    double comp = -75.1482593604084136;
     bool triangular = false;
     bool circular = true;
     bool spherical = false;
 
     
-    ignoreUnused(number, sides, size, diagonal, diameter, ratio, pi, cmat, compl, triangular, circular, spherical); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, sides, size, diagonal, diameter, ratio, pi, cmat, comp, triangular, circular, spherical); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -98,18 +98,18 @@ int openDoor(bool whoIS, int howMany)
 /*
  2)
  */
-int useComputer(bool available, int time, char application, char kindPC)
+void useComputer(bool available, int time, std::string app , std::string kindPC)
 {
-    ignoreUnused(available, time, application, kindPC);
-    return{};
+    ignoreUnused(available, time, app, kindPC);
+    return;
 }
 
 /*
  3)
  */
-char letterRunner(bool importance, bool priority, char whosFor, char whosDelivering)
+char letterRunner(bool importance, bool priority, bool boss)
 {
-    ignoreUnused(importance, priority, whosFor, whosDelivering);
+    ignoreUnused(importance, priority, boss);
     return{};
 }
 /*
@@ -123,7 +123,7 @@ bool simpleCarInspection(bool hasLiquids, bool tiresAir, bool cockpitMessages)
 /*
  5)
  */
-bool playInstrument(bool instrumentIsTuned, char progrNotes, char rythm)
+bool playInstrument(bool instrumentIsTuned, char progrNotes[16], char rythm[8])
 {
     ignoreUnused(instrumentIsTuned, progrNotes, rythm);
     return{};
@@ -150,9 +150,9 @@ bool buyFruit(bool fresh, int variety, float affordable)
 /*
  8)
  */
-bool goParty(bool withFriends, char where, char dress)
+bool goParty(bool withFriends, std::string whereToGo, std::string dress)
 {
-    ignoreUnused(withFriends, where, dress);
+    ignoreUnused(withFriends, whereToGo, dress);
     return{};
 }
 
@@ -168,7 +168,7 @@ char instrumRecord(bool percussion, bool winds, bool strings)
 /*
  10)
  */
-char petDailyCare(char kind, char size, int age)
+char petDailyCare(std::string kind, std::string size, int age)
 {
     ignoreUnused(kind, size, age);
     return{};
@@ -197,10 +197,10 @@ int main()
     auto safeToOpen = openDoor(true, 1);
     
     //2)
-    auto borrowedPC = useComputer(true, 60, "Do presentation", "Desktop");
+    useComputer(true, 60, "p", "d");
     
     //3)
-    auto delivery = letterRunner(true, true, "Boss", "SpeedRunner");
+    auto delivery = letterRunner(true, true, true);
 
     //4)
     auto carDisposition = simpleCarInspection(true, true, false);
@@ -215,15 +215,15 @@ int main()
     auto todayFruitSalad = buyFruit(true, 3, true);
     
     //8)
-    auto wkGoodTime = goParty(true, "Ibiza", "Relaxed");
+    goParty(true, "Ibiza", "Relaxed");
     
     //9)
     auto micSelection = instrumRecord(true, false, false);
     
     //10)
-    auto foodSelector = petDailyCare("Dog", "Big", "5");
+    petDailyCare("Dog", "Big", 5);
     
-    ignoreUnused(carRented, borrowedPC, safeToOpen, borrowedPC, delivery, carDisposition, startNextSong, canPark, todayFruitSalad, wkGoodTime, micSelection, foodSelector);
+    ignoreUnused(carRented, safeToOpen, useComputer, delivery, carDisposition, startNextSong, canPark, todayFruitSalad, goParty, micSelection, petDailyCare);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
