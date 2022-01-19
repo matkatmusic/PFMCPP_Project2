@@ -98,10 +98,10 @@ int openDoor(bool whoIS, int howMany)
 /*
  2)
  */
-void useComputer(bool available, int time, std::string app , std::string kindPC)
+char useComputer(bool available, int time, char app , char kindPC)
 {
     ignoreUnused(available, time, app, kindPC);
-    return;
+    return{};
 }
 
 /*
@@ -123,9 +123,9 @@ bool simpleCarInspection(bool hasLiquids, bool tiresAir, bool cockpitMessages)
 /*
  5)
  */
-bool playInstrument(bool instrumentIsTuned, char progrNotes[16], char rythm[8])
+bool playInstrument(bool instrumentIsTuned, char progrNotes, char rhythm)
 {
-    ignoreUnused(instrumentIsTuned, progrNotes, rythm);
+    ignoreUnused(instrumentIsTuned, progrNotes, rhythm);
     return{};
 }
 
@@ -197,7 +197,7 @@ int main()
     auto safeToOpen = openDoor(true, 1);
     
     //2)
-    useComputer(true, 60, "p", "d");
+    auto borrowPC = useComputer(true, 60, 'p', 'd'); 
     
     //3)
     auto delivery = letterRunner(true, true, true);
@@ -206,7 +206,7 @@ int main()
     auto carDisposition = simpleCarInspection(true, true, false);
     
     //5)
-    auto startNextSong = playInstrument(true, "E major", "Rock");
+    auto startNextSong = playInstrument(true, 'E', 'R');   
     
     //6)
     auto canPark = refuelGas(true, 5.5, 98);
@@ -223,7 +223,7 @@ int main()
     //10)
     petDailyCare("Dog", "Big", 5);
     
-    ignoreUnused(carRented, safeToOpen, useComputer, delivery, carDisposition, startNextSong, canPark, todayFruitSalad, goParty, micSelection, petDailyCare);
+    ignoreUnused(carRented, safeToOpen, borrowPC, delivery, carDisposition, startNextSong, canPark, todayFruitSalad, goParty, micSelection, petDailyCare);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
