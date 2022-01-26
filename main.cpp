@@ -90,48 +90,88 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1) 
  */
 
-float loanRepayment(int initialTerm, int aprPercentage =0);
+float loanRepayment(int initialTerm, int aprPercentage =0) 
+{ 
+    ignoreUnused(initialTerm, aprPercentage);
+    return {};
+}
 
 /*
  2)
  */
-float monthlyFee(int initialDeposit, bool tradeInCost = 1111);
+float monthlyFee(int initialDeposit, bool tradeInCost = 1111) 
+{ 
+    ignoreUnused(initialDeposit, tradeInCost);
+    return {};
+}
 
 /*
  3)
  */
 
-int brand(int brandName, double worldwideSales = 345);
+int brand(int brandName, double worldwideSales = 345) 
+{ 
+    ignoreUnused(brandName, worldwideSales);
+    return {};
+}
 
 /*
  4)
  */
-int name(int firstName, int lastName = 666);
+int name(int firstName, int lastName = 666) 
+{ 
+    ignoreUnused(firstName, lastName);
+    return {};
+}
 /*
  5)
  */
-char ch (int letterC, int letterH = 222 );
+char ch (int letterC, int letterH = 222 ) 
+{ 
+    ignoreUnused(letterC, letterH);
+    return {};
+}
 /*
  6)
  */
-char cj (bool letterC, double letterJ = 999 );
+char cj (bool letterC, double letterJ = 999 ) 
+{ 
+    ignoreUnused(letterC, letterJ);
+    return {};
+}
 /*
  7)
  */
-bool hoursWorked (int clockInTime, double clockOutTime = 56);
+bool hoursWorked (int clockInTime, double clockOutTime = 56) 
+{ 
+    ignoreUnused(clockInTime, clockOutTime);
+    return {};
+}
 /*
  8)
  */
-bool sickPay (int yearsEmployed, double daysOffSick = 56);
+bool sickPay (int yearsEmployed, double daysOffSick = 56) 
+{ 
+    ignoreUnused(yearsEmployed, daysOffSick); 
+    return {};
+}
 
 /*
  9)
  */
-bool overtimePay (int extraHoursWorked, int breaksTaken = 90210);
+bool overtimePay (int extraHoursWorked, int breaksTaken = 90210) 
+{ 
+    ignoreUnused(extraHoursWorked, breaksTaken);
+    return {};
+}
 /*
  10)
  */
-int number (int amountOfNumerals, bool amountAbove100 = 39120);
+int number (int amountOfNumerals, bool amountAbove100 = 39120) 
+{ 
+    ignoreUnused(amountOfNumerals, amountAbove100 );
+    return {};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
