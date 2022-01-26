@@ -55,15 +55,20 @@ wchar_t
 
 //2)
 
-void variableDeclarations (float loanRepayment = 2, float repaymentAmount = 4,float monthlyFee = 6);
+void variableDeclarations 
+(float loanRepayment = 2, float repaymentAmount = 4,float monthlyFee = 6);
 
-void variableDeclarations (double a = 1.297, double b = 3.294, double c = 6.225);
+void variableDeclarations 
+(double a = 1.297, double b = 3.294, double c = 6.225);
 
-void variableDeclarations (char ch = 11,char ci = 12,char cj = 13);
+void variableDeclarations 
+(char ch = 11, char ci = 12, char cj = 13);
 
-void variableDeclarations (bool hoursWorked = 3 ,bool overtimePay = 7 ,bool sickPay = 5);
+void variableDeclarations 
+(bool hoursWorked = 3, bool overtimePay = 7 , bool sickPay = 5);
 
-void variableDeclarations (int brand = 1000,int number = 1111,int name = 1234);
+void variableDeclarations 
+(int brand = 1000, int number = 1111, int name = 1234);
 
 void ignoreUnused()
 
@@ -192,7 +197,9 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1) 
+    //1)
+    
+    auto amountPaid = loanRepayment(9, 1);
     
     //2)
     
@@ -213,7 +220,7 @@ int main()
     //10)
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, amountPaid);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
