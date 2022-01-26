@@ -17,13 +17,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of the 6 major primitive types available in C++  here:
  
  
- 
- 
- 
- 
- 
- 
- 
+int
+float 
+bool
+double
+char
+wchar_t
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -55,12 +54,23 @@ video: Chapter 2 - Part 3
  */
 
 //2)
-void variableDeclarations()
+
+void variableDeclarations (float loanRepayment = 2, float repaymentAmount = 4,float monthlyFee = 6);
+
+void variableDeclarations (double a = 1.297, double b = 3.294, double c = 6.225);
+
+void variableDeclarations (char ch = 11,char ci = 12,char cj = 13);
+
+void variableDeclarations (bool hoursWorked = 3 ,bool overtimePay = 7 ,bool sickPay = 5);
+
+void variableDeclarations (int brand = 1000,int number = 1111,int name = 1234);
+
+void ignoreUnused()
+
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
-
+  
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 }
@@ -77,44 +87,51 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
+
+float loanRepayment(int initialTerm, int aprPercentage =0);
 
 /*
  2)
  */
+float monthlyFee(int initialDeposit, bool tradeInCost = 1111);
 
 /*
  3)
  */
 
+int brand(int brandName, double worldwideSales = 345);
+
 /*
  4)
  */
-
+int name(int firstName, int lastName = 666);
 /*
  5)
  */
-
+char ch (int letterC, int letterH = 222 );
 /*
  6)
  */
-
+char cj (bool letterC, double letterJ = 999 );
 /*
  7)
  */
-
+bool hoursWorked (int clockInTime, double clockOutTime = 56);
 /*
  8)
  */
+bool sickPay (int yearsEmployed, double daysOffSick = 56);
 
 /*
  9)
  */
-
+bool overtimePay (int extraHoursWorked, int breaksTaken = 90210);
 /*
  10)
  */
+int number (int amountOfNumerals, bool amountAbove100 = 39120);
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -135,7 +152,7 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
+    //1) 
     
     //2)
     
