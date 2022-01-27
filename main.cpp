@@ -62,7 +62,7 @@ void variableDeclarations
 (double a = 1.297, double b = 3.294, double c = 6.225);
 
 void variableDeclarations 
-(char ch = 11, char ci = 12, char cj = 13);
+(char bang = 11, char loudness = 12, char distance = 13);
 
 void variableDeclarations 
 (bool hoursWorked = 3, bool overtimePay = 7 , bool sickPay = 5);
@@ -131,9 +131,9 @@ int name(int firstName, int lastName = 666)
 /*
  5)
  */
-char ch (int letterC, int letterH = 222 ) 
+char bang (int loudness, int distanceTravelled = 222) 
 { 
-    ignoreUnused(letterC, letterH);
+    ignoreUnused(loudness, distanceTravelled);
     return {};
 }
 /*
@@ -203,24 +203,44 @@ int main()
     
     //2)
     
-    //3)
+    auto amountOwed = monthlyFee (15, 25);
+
+    //3) 
+
+    auto nameOfBrand = brand (1000,1111);
     
     //4)
     
+    auto personsName = name (6578, 6579);
+
     //5)
+
+    auto howLoud = bang (997,616);
     
+
     //6)
     
+    auto lettersUsed = cj (546,223); 
+
     //7)
     
+    auto amountOfHours = hoursWorked (1200, 1800);
+
     //8)
+
+     auto amountOwedToEmployee = sickPay (2255, 2266);
     
     //9)
-    
+
+     auto payAccrued = overtimePay (6969, 420);
+
     //10)
+
+    auto finalFigure = number (65478, 35217);
+
+    ignoreUnused
+    (carRented, amountPaid, amountOwed, nameOfBrand, personsName, howLoud, lettersUsed, amountOfHours, amountOwedToEmployee, payAccrued, finalFigure);
     
-    
-    ignoreUnused(carRented, amountPaid);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
