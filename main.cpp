@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+int
+float
+bool
+char
+double 
+long 
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +62,39 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
+    int digit = 1;
+    int decade = 100;
+    int multiple = 8;
+
+    float temperature = 68.1f;
+    float soundDecibel = 90.f;
+    float soundFrequency = 440.f;
+
+    bool isStable = 1;
+    bool isComplete = 0;
+    bool isUndefined = 0;
+
+    char letter = 'A';
+    char underScore = '_';
+    char numberString = '4';
+
+    double multiplicationResult = 1.0;
+    double numerator = 5.89;
+    double speedOfSound = 343.3;
+
+    long totalNumberOfDirections = 16781;
+    long numberOfSandGrains = 999999;
+    long registeredVoters = 1456899;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(digit, decade, multiple);
+    ignoreUnused(temperature, soundDecibel, soundFrequency);
+    ignoreUnused(isStable, isComplete, isUndefined);
+    ignoreUnused(letter, underScore, numberString);
+    ignoreUnused(multiplicationResult, numerator, speedOfSound);
+    ignoreUnused(totalNumberOfDirections, numberOfSandGrains, registeredVoters);
+    
 }
 
 /*
@@ -84,43 +111,89 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int createARoom(int length = 3, int width = 2, int height = 2)
+{
+    ignoreUnused(length, width, height);
 
+    return {};
+}
 /*
  2)
  */
+bool pressKeyWord(char keyWord)
+{
+    ignoreUnused(keyWord);
 
+    return {};
+}
 /*
  3)
  */
+float divide(float numerator = 1.f, float denominator = 1.f)
+{
+    ignoreUnused(numerator, denominator);
+
+    return {};
+}
 
 /*
  4)
  */
-
+void controlQuality(double qualityScore)
+{
+    ignoreUnused(qualityScore);
+}
 /*
  5)
  */
+float convolution(float inputSample, float filterCoeff)
+{
+    ignoreUnused(inputSample, filterCoeff);
+
+    return {};
+}
 
 /*
  6)
  */
+bool compareLetters(char letterOne, char letterTwo)
+{
+    ignoreUnused(letterOne, letterTwo);
 
+    return {};
+}
 /*
  7)
  */
-
+void moveObject(float azimuthInDegree, float elevationInDegree, float distanceInMeter)
+{
+    ignoreUnused(azimuthInDegree, elevationInDegree, distanceInMeter);
+}
 /*
  8)
  */
+int countSteps(float legLengthInCentimeters, int distanceInMeters)
+{
+    ignoreUnused(legLengthInCentimeters, distanceInMeters);
 
+    return {};
+}
 /*
  9)
  */
-
+void drinkWater(int totalLiters = 4)
+{
+    ignoreUnused(totalLiters);
+}
 /*
  10)
  */
+bool playGuitar(char musicNote = 'G', int durationInSeconds = 10)
+{
+    ignoreUnused(musicNote, durationInSeconds);
 
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +214,36 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto myRoom = createARoom(5, 3, 2);
     //2)
-    
+    auto isKeyWordPressed = pressKeyWord('k');
     //3)
-    
+    auto result = divide(4.5f, 3.1f);
     //4)
-    
+    controlQuality(89.42);
     //5)
-    
+    auto output = convolution(0.4562f, 1.3859f);
     //6)
-    
+    auto isSameLetter = compareLetters('A', 'A');
     //7)
-    
+    moveObject(45, 30, 2);
     //8)
-    
+    auto numberOfSteps = countSteps(0.89f, 1000);
     //9)
-    
+    drinkWater(3);
     //10)
-    
+    auto didItPlay = playGuitar('C', 5);
     
     ignoreUnused(carRented);
+    ignoreUnused(myRoom);
+    ignoreUnused(isKeyWordPressed);
+    ignoreUnused(result);
+    ignoreUnused(output);
+    ignoreUnused(isSameLetter);
+    ignoreUnused(numberOfSteps);
+    ignoreUnused(didItPlay);
+
+    
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
