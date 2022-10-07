@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ Integer
+ Character
+ Boolean
+ Floating Point
+ Double
+ Unsigned int
  
  
  
@@ -62,7 +62,33 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
-    //example:
+	int myAge = 25;
+	int numberOfCats = 2;
+	int carType = 3;
+	
+	char letter = 'a';
+	char grade = 'f';
+	char group = 'c';
+	
+	bool isCarRunning = true;
+	bool off = false;
+	bool jumping = true;
+
+	float temperature = 29.5f;
+	float taxRate = 7.0f;
+	float christmasBonus = 2000.52f;
+
+	double volume = 35.65;
+	double commission = 20.00;
+	double divisor = 6.2;
+
+	unsigned exitGroup = 7;
+	unsigned fluidOunces = 2; 
+	unsigned grapes = 0;
+
+	ignoreUnused(myAge, numberOfCats, carType, letter, grade, group, isCarRunning, off, jumping, temperature, taxRate, christmasBonus, volume, commission, divisor, exitGroup, fluidOunces, grapes);
+	
+	//example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
 
@@ -82,45 +108,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
-
+void ejectSeat(float speedOfEjection, int ejectionDelay)
+{
+	ignoreUnused(speedOfEjection, ejectionDelay);
+}
 /*
  2)
  */
-
+bool purchaseIceCream (int numberOfCones = 1, int numberOfFlavors = 1, bool specialtyCone = false)
+{
+	ignoreUnused(numberOfCones, numberOfFlavors, specialtyCone);
+	return {};
+}
 /*
  3)
  */
-
+float totalGrade (float assignmentOneGrade, float assignmentTwoGrade, float assignmentThreeGrade, float assignmentFourGrade)
+{
+	ignoreUnused(assignmentOneGrade, assignmentTwoGrade, assignmentThreeGrade, assignmentFourGrade);
+	return {};
+}
 /*
  4)
  */
-
+int topFiveRankings (int rankOne, int rankTwo, int rankThree, int rankFour, int rankFive)
+{
+	ignoreUnused(rankOne, rankTwo, rankThree, rankFour, rankFive);
+	return {};
+}
 /*
  5)
  */
-
+bool buyAMacbook (double macbookPrice = 1999.99, double salesTax = 0.77, bool spaceGray = true)
+{
+	ignoreUnused(macbookPrice, salesTax, spaceGray);
+	return {};
+}
 /*
  6)
  */
-
+int setMasterLevel (int volumeLevel = 0)
+{
+	ignoreUnused(volumeLevel);
+	return {};
+}
 /*
  7)
  */
-
+void greeting(bool isFriendly)
+{
+	ignoreUnused(isFriendly);
+}
 /*
  8)
  */
-
+int onePieceEpisodeTracker(int episodeNumber = 1)
+{
+	ignoreUnused(episodeNumber);
+	return {};
+}
 /*
  9)
  */
-
+float fuelEconomy (float milesPerGallon, float gallonsInTank, float milesDriven, float timeDriven = 1)
+{
+	ignoreUnused(milesPerGallon, gallonsInTank, milesDriven, timeDriven);
+	return {};
+}
 /*
  10)
  */
-
+bool continueHomework (bool motivationLevel, double timeLeft)
+{
+	ignoreUnused(motivationLevel, timeLeft);
+	return{};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
