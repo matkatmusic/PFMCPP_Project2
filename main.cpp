@@ -15,16 +15,31 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
+ */
+ 
+int inteiro = 0;            // bytes  2 or 4
+double speed = 12.3;        // 15 digits precision   bytes = 8
+float calc = 0.32;          // 7 digits precision  bytes = 4
+bool running = true;        //  true/false   bytes = 1
+char square = 'a';          // caracter bytes 1
+wchar_t point ;            // = 'á'; = 'ç' etc  // print on output wcin  wout  Unicode UTF-16 special caracters
+
+
+/* Tips
+
+std::string str = "shining";
+
+long
+short
+unsigned
+signed
+signed long
+signed long long
+unsigned short
+ */
  
  
- 
- 
- 
- 
- 
- 
- 
- 
+ /*
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -63,11 +78,32 @@ video: Chapter 2 - Part 3
 void variableDeclarations()
 {
     //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
 
+    int cash = 0;
+    int level = 0;
+    int point = 0;
+
+    float limit = 0.0;
+    float height = 0.0;
+    float width = 0.0;
+
+    double volume = 0.0;
+    double density = 0.0;
+    double pression = 0.0; 
+
+    bool running = false;
+    bool good = false;
+    bool captain = false;
+
+    char note = '-';
+    char room = '-';
+    char side = '-';
+
+    // wcar_t  ignored
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+      ignoreUnused(cash, level, point, limit, height, width, volume, density, pression, running, good, captain, note, room, side);
 }
 
 /*
@@ -81,45 +117,85 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1)
- */
 
-/*
- 2)
- */
+//  1) *
+ double calculateTime(double initialTime = 0.0, double finalTime = 0.0)
+{
+    ignoreUnused(initialTime, finalTime);
+    return {};
+}
 
-/*
- 3)
- */
+// 2)
+bool fallingOrStopped(bool clicked, int timesOnStage)
+{
+    ignoreUnused(clicked, timesOnStage);
+    return {};    
+}
 
-/*
- 4)
- */
+ // 3)
+void makeCircle(double diameter, int centerX = 0, int centerY = 0)
+{
+    ignoreUnused(diameter, centerX, centerY);
+}
 
-/*
- 5)
- */
+// 4)
+bool printImage(char option, int width)
+{
+    ignoreUnused(option, width);
+    return {};    
+}
 
-/*
- 6)
- */
+ // 5)
+char classRoom( int numberID)
+{
+    ignoreUnused(numberID);
+    return {};  
+}
 
-/*
- 7)
- */
+ // 6)
 
-/*
- 8)
- */
+bool shining(int numberID, int temperature)
+{
+    ignoreUnused(numberID, temperature);
+    return {};    
+}
 
-/*
- 9)
- */
+// 7)
+void shutdown(bool bottonClicked, int waitTime)
+{
+    ignoreUnused(bottonClicked, waitTime);
+}
 
-/*
- 10)
- */
+// 8)
+
+float change(double received, double total)
+{
+    ignoreUnused(received, total);
+    return {};    
+}
+
+// 9)
+double currentPlace(double coordenateX, double coordenateY )
+{
+    ignoreUnused(coordenateX, coordenateY);
+    return {};    
+}
+
+// 10)
+int possibleSystemItensTime()                         // in .header - long name only supose
+{
+    return {};
+};                       
+int getCurrentYear(int = possibleSystemItensTime())   // in .header long name only supose
+{
+    return {};
+}
+
+int ageStudent(int yearBorn, int currentYear = getCurrentYear())
+{
+    ignoreUnused(yearBorn, currentYear);
+    return {};    
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +217,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto time = calculateTime(2.356, 4.367);
     //2)
-    
+    auto falling = fallingOrStopped(true, 12);
     //3)
-    
+    makeCircle(0.76, 12, 1004);
     //4)
-    
+    auto printing = printImage('a', 22);
     //5)
-    
+    auto studentRoom = classRoom(12922);
     //6)
-    
+    auto objectState = shining(176, 22);
     //7)
-    
+    shutdown(false, 0);
     //8)
-    
+    auto getChange = change(12.00, 11.32);
     //9)
-    
+    auto placeNow = currentPlace(0.34, 8.32);
     //10)
-    
-    
-    ignoreUnused(carRented);
+    auto currentStudentEditing(2002);
+
+
+    ignoreUnused(carRented, time, falling, printing, studentRoom, objectState, getChange, placeNow, currentStudentEditing);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
