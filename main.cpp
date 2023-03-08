@@ -200,9 +200,9 @@ int main()
     //1)
     auto timeCalculated = calculateTime(2.356, 4.367);    
     //2)
-    auto statusPlace = boolMoveOnDisplay(true, 12);
+    auto boolMove = boolMoveOnDisplay(true, 12);
     //3)
-    auto areaReserved = calcCircleArea(0.76, 12, 1004);
+    auto areaCircle = calcCircleArea(0.76, 12, 1004);
     //4)
     auto printNow = printImage('a', 22);
     //5)
