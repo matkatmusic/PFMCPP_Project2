@@ -165,7 +165,7 @@ float changeToCostumer(double received, double total = 0)
 /*
  9)
  */
-double currentPlace(double coordenateX = 0, double coordenateY = 0 )
+double currentPlace(double coordenateX = 0, double coordenateY = 0)
 {
     ignoreUnused(coordenateX, coordenateY);
     return {};    
