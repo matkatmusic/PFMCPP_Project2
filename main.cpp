@@ -68,9 +68,9 @@ void variableDeclarations()
     int level = 0;
     int point = 0;
 
-    float limit = 0.0;
-    float height = 0.0;
-    float width = 0.0;
+    float limit = 0.0f;
+    float height = 0.0f;
+    float width = 0.0f;
 
     double volume = 0.0;
     double density = 0.0;
@@ -108,7 +108,7 @@ double calculateTime(double initialTime = 0.0, double finalTime = 0.0)
 /*
  2)
  */
-bool fallingOrStopped(bool clicked, int timesOnStage = 0)
+bool boolMoveOnDisplay(bool clicked, int timesOnStage = 0)
 {
     ignoreUnused(clicked, timesOnStage);
     return {};    
@@ -133,7 +133,7 @@ bool printImage(char option, int width = 5)
 /*
  5)
  */
-char classRoomStudent( int numberID, int year = 2020)
+char getClassRoomStudent( int numberID, int year = 2020)
 {
     ignoreUnused(numberID, year);
     return {};  
@@ -141,7 +141,7 @@ char classRoomStudent( int numberID, int year = 2020)
 /*
  6)
  */
-bool shiningStar(int numberID, int temperature = 1000)
+bool starEmitsLight(int numberID, int temperature = 1000)
 {
     ignoreUnused(numberID, temperature);
     return {};    
@@ -165,7 +165,7 @@ float changeToCostumer(double received, double total = 0)
 /*
  9)
  */
-double currentPlace(double coordenateX = 0, double coordenateY = 0)
+double getCurrentPlaceObject(double coordenateX = 0, double coordenateY = 0)
 {
     ignoreUnused(coordenateX, coordenateY);
     return {};    
@@ -200,21 +200,21 @@ int main()
     //1)
     auto timeCalculated = calculateTime(2.356, 4.367);    
     //2)
-    auto statusPlace = fallingOrStopped(true, 12);
+    auto statusPlace = boolMoveOnDisplay(true, 12);
     //3)
     auto areaReserved = calcCircleArea(0.76, 12, 1004);
     //4)
     auto printNow = printImage('a', 22);
     //5)
-    auto studentRoom = classRoomStudent(12922);
+    auto studentRoom = getClassRoomStudent(12922);
     //6)
-    auto shineStatus = shiningStar(176, 22);
+    auto shineStatus = starEmitsLight(176, 22);
     //7)
     bool onOff = shutdownSystem(false, 0);
     //8)
     auto getChange = changeToCostumer(12.00, 11.32);
     //9)
-    auto placeNow = currentPlace(0.34, 8.32);
+    auto placeNow = getCurrentPlaceObject(0.34, 8.32);
     //10)
     auto studentAge = getAgeStudent(2002, 2020);
     
