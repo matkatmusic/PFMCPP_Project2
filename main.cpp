@@ -15,31 +15,15 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- */
  
-int inteiro = 0;            // bytes  2 or 4
-double speed = 12.3;        // 15 digits precision   bytes = 8
-float calc = 0.32;          // 7 digits precision  bytes = 4
-bool running = true;        //  true/false   bytes = 1
-char square = 'a';          // caracter bytes 1
-wchar_t point ;            // = 'á'; = 'ç' etc  // print on output wcin  wout  Unicode UTF-16 special caracters
-
-
-/* Tips
-
-std::string str = "shining";
-
-long
-short
-unsigned
-signed
-signed long
-signed long long
-unsigned short
- */
+int          // integer
+float        // Floating Point
+double       // Double Floating Point
+bool         // Boolean
+char         // Character
+wchar_t      // Wide Character
+  
  
- 
- /*
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -78,8 +62,8 @@ unsigned short
 void variableDeclarations()
 {
     //example:
-    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-
+    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    
     int cash = 0;
     int level = 0;
     int point = 0;
@@ -99,11 +83,8 @@ void variableDeclarations()
     char note = '-';
     char room = '-';
     char side = '-';
-
-    // wcar_t  ignored
     
-    //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-      ignoreUnused(cash, level, point, limit, height, width, volume, density, pression, running, good, captain, note, room, side);
+    ignoreUnused(number, cash, level, point, limit, height, width, volume, density, pression, running, good, captain, note, room, side); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -116,87 +97,87 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
-
-
-//  1) *
+/*
+ 1)
+ */
  double calculateTime(double initialTime = 0.0, double finalTime = 0.0)
 {
     ignoreUnused(initialTime, finalTime);
     return {};
 }
-
-// 2)
-bool fallingOrStopped(bool clicked, int timesOnStage)
+/*
+ 2)
+ */
+bool fallingOrStopped(bool clicked, int timesOnStage = 0)
 {
     ignoreUnused(clicked, timesOnStage);
     return {};    
 }
-
- // 3)
-void makeCircle(double diameter, int centerX = 0, int centerY = 0)
+/*
+ 3)
+ */
+double calcCircleArea(double diameter, int centerX = 0, int centerY = 0)
 {
     ignoreUnused(diameter, centerX, centerY);
-}
 
-// 4)
-bool printImage(char option, int width)
+    return {};    
+}
+/*
+ 4)
+ */
+bool printImage(char option, int width = 5)
 {
     ignoreUnused(option, width);
     return {};    
 }
-
- // 5)
-char classRoom( int numberID)
+/*
+ 5)
+ */
+char classRoomStudent( int numberID, int year = 2020)
 {
-    ignoreUnused(numberID);
+    ignoreUnused(numberID, year);
     return {};  
 }
-
- // 6)
-
-bool shining(int numberID, int temperature)
+/*
+ 6)
+ */
+bool shiningStar(int numberID, int temperature = 1000)
 {
     ignoreUnused(numberID, temperature);
     return {};    
 }
-
-// 7)
-void shutdown(bool bottonClicked, int waitTime)
+/*
+ 7)
+ */
+bool shutdownSystem(bool bottonClicked, int waitTime = 10)
 {
     ignoreUnused(bottonClicked, waitTime);
+     return {}; 
 }
-
-// 8)
-
-float change(double received, double total)
+/*
+ 8)
+ */
+float changeToCostumer(double received, double total = 0)
 {
     ignoreUnused(received, total);
     return {};    
 }
-
-// 9)
-double currentPlace(double coordenateX, double coordenateY )
+/*
+ 9)
+ */
+double currentPlace(double coordenateX = 0, double coordenateY = 0 )
 {
     ignoreUnused(coordenateX, coordenateY);
     return {};    
 }
-
-// 10)
-int possibleSystemItensTime()                         // in .header - long name only supose
-{
-    return {};
-};                       
-int getCurrentYear(int = possibleSystemItensTime())   // in .header long name only supose
-{
-    return {};
-}
-
-int ageStudent(int yearBorn, int currentYear = getCurrentYear())
+/*
+ 10)
+ */
+int getAgeStudent(int yearBorn, int currentYear = 2020)
 {
     ignoreUnused(yearBorn, currentYear);
     return {};    
 }
-
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -217,28 +198,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto time = calculateTime(2.356, 4.367);
+    auto timeCalculated = calculateTime(2.356, 4.367);    
     //2)
-    auto falling = fallingOrStopped(true, 12);
+    auto statusPlace = fallingOrStopped(true, 12);
     //3)
-    makeCircle(0.76, 12, 1004);
+    auto areaReserved = calcCircleArea(0.76, 12, 1004);
     //4)
-    auto printing = printImage('a', 22);
+    auto printNow = printImage('a', 22);
     //5)
-    auto studentRoom = classRoom(12922);
+    auto studentRoom = classRoomStudent(12922);
     //6)
-    auto objectState = shining(176, 22);
+    auto shineStatus = shiningStar(176, 22);
     //7)
-    shutdown(false, 0);
+    bool onOff = shutdownSystem(false, 0);
     //8)
-    auto getChange = change(12.00, 11.32);
+    auto getChange = changeToCostumer(12.00, 11.32);
     //9)
     auto placeNow = currentPlace(0.34, 8.32);
     //10)
-    auto currentStudentEditing(2002);
-
-
-    ignoreUnused(carRented, time, falling, printing, studentRoom, objectState, getChange, placeNow, currentStudentEditing);
+    auto studentAge = getAgeStudent(2002, 2020);
+    
+    ignoreUnused(carRented, timeCalculated, statusPlace, areaReserved, printNow, studentRoom, shineStatus, onOff, getChange, placeNow, studentAge);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
