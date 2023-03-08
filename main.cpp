@@ -100,7 +100,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
- double calculateTime(double initialTime = 0.0, double finalTime = 0.0)
+double calculateTime(double initialTime = 0.0, double finalTime = 0.0)
 {
     ignoreUnused(initialTime, finalTime);
     return {};
