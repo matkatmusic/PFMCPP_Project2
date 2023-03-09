@@ -122,7 +122,7 @@ double calculateTime(double initialTime = 0.0, double finalTime = 0.0) {
 /*
  2)
  */
-bool ballMoveOnDisplay(bool clicked, int timesOnStage = 0) {
+bool moveBallOnDisplay(bool clicked, int timesOnStage = 0) {
   ignoreUnused(clicked, timesOnStage);
   return {};
 }
@@ -151,7 +151,7 @@ char getClassRoomStudent(int numberID, int year = 2020) {
 /*
  6)
  */
-bool starEmitsLight(int numberID, int temperature = 1000) {
+bool changeStarColor(int numberID, int temperature = 1000) {
   ignoreUnused(numberID, temperature);
   return {};
 }
@@ -207,7 +207,7 @@ int main() {
   // 1)
   auto timeCalculated = calculateTime(2.356, 4.367);
   // 2)
-  auto ballMove = ballMoveOnDisplay(true, 12);
+  auto ballMove = moveBallOnDisplay(true, 12);
   // 3)
   auto areaCircle = calcCircleArea(0.76, 12, 1004);
   // 4)
@@ -215,7 +215,7 @@ int main() {
   // 5)
   auto studentRoom = getClassRoomStudent(12922);
   // 6)
-  auto shineStatus = starEmitsLight(176, 22);
+  auto starColor = changeStarColor(176, 22);
   // 7)
   auto onOff = shutdownSystem(false, 0);
   // 8)
@@ -226,7 +226,7 @@ int main() {
   auto studentAge = getAgeStudent(2002, 2020);
 
   ignoreUnused(carRented, timeCalculated, ballMove, areaCircle, printNow,
-               studentRoom, shineStatus, onOff, getChange, placeNow,
+               studentRoom, starColor, onOff, getChange, placeNow,
                studentAge);
   std::cout << "good to go!" << std::endl;
   return 0;
