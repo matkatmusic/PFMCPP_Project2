@@ -16,12 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
-int         // integer
-float        // Floating Point
-double       // Double Floating Point
-bool         // Boolean
-char         // Character
-wchar_t      // Wide Character
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -63,27 +65,9 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
-    int cash = 0;
-    int level = 0;
-    int point = 0;
 
-    float limit = 0.0f;
-    float height = 0.0f;
-    float width = 0.0f;
-
-    double volume = 0.0;
-    double density = 0.0;
-    double pression = 0.0;
-
-    bool running = false;
-    bool good = false;
-    bool captain = false;
-
-    char note = '-';
-    char room = '-';
-    char side = '-';
     
-    ignoreUnused(number, cash, level, point, limit, height, width, volume, density, pression, running, good, captain, note, room, side); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -100,73 +84,43 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-double calculateTime(double initialTime = 0.0, double finalTime = 0.0) {
-    ignoreUnused(initialTime, finalTime);
-    return {};
-}
+
 /*
  2)
  */
-bool moveBallOnDisplay(bool clicked, int timesOnStage = 0) {
-    ignoreUnused(clicked, timesOnStage);
-    return {};
-}
+
 /*
  3)
  */
-double calcCircleArea(double diameter, int centerX = 0, int centerY = 0) {
-    ignoreUnused(diameter, centerX, centerY);
-    return {};
-}
+
 /*
  4)
  */
-bool printImage(char option, int width = 5) {
-    ignoreUnused(option, width);
-    return {};
-}
+
 /*
  5)
  */
-char getClassRoomStudent(int numberID, int year = 2020) {
-    ignoreUnused(numberID, year);
-    return {};
-}
+
 /*
  6)
  */
-bool changeStarColor(int numberID, int temperature = 1000) {
-    ignoreUnused(numberID, temperature);
-    return {};
-}
+
 /*
  7)
  */
-bool shutdownSystem(bool bottonClicked, int waitTime = 10) {
-    ignoreUnused(bottonClicked, waitTime);
-    return {};
-}
+
 /*
  8)
  */
-float changeToCostumer(double received, double total = 0) {
-    ignoreUnused(received, total);
-    return {};
-}
+
 /*
  9)
  */
-double getCurrentPlaceObject(double coordenateX = 0, double coordenateY = 0) {
-    ignoreUnused(coordenateX, coordenateY);
-    return {};
-}
+
 /*
  10)
  */
-int getAgeStudent(int yearBorn, int currentYear = 2020) {
-    ignoreUnused(yearBorn, currentYear);
-    return {};
-}
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -187,27 +141,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto timeCalculated = calculateTime(2.356, 4.367);    
-    //2)
-    auto ballMove = moveBallOnDisplay(true, 12);    
-    //3)
-    auto areaCircle = calcCircleArea(0.76, 12, 1004);    
-    //4)
-    auto printNow = printImage('a', 22);    
-    //5)
-    auto studentRoom = getClassRoomStudent(12922);    
-    //6)
-    auto starColor = changeStarColor(176, 22);    
-    //7)
-    auto onOff = shutdownSystem(false, 0);    
-    //8)
-    auto getChange = changeToCostumer(12.00, 11.32);    
-    //9)
-    auto placeNow = getCurrentPlaceObject(0.34, 8.32);    
-    //10)
-    auto studentAge = getAgeStudent(2002, 2020);    
     
-    ignoreUnused(carRented, timeCalculated, ballMove, areaCircle, printNow, studentRoom, starColor, onOff, getChange, placeNow, studentAge);
+    //2)
+    
+    //3)
+    
+    //4)
+    
+    //5)
+    
+    //6)
+    
+    //7)
+    
+    //8)
+    
+    //9)
+    
+    //10)
+    
+    
+    ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
