@@ -80,7 +80,7 @@ void variableDeclarations() {
   int distance = 0;
   int timeElapsed = 10;
 
-  char text = 'hello';
+  char text[15] = "hello_world";
   char grade = 'A';
   char rank;
 
@@ -88,9 +88,9 @@ void variableDeclarations() {
   long yCord = 23432423;
   long zCord;
 
-  float xTick = 3.03;
-  float yTick = 6.06;
-  float zTick = 9.09;
+  float xTick = 3.03f;
+  float yTick = 6.06f;
+  float zTick = 9.09f;
 
   double pick = 3.09302;
   double length = 6.18604;
@@ -124,7 +124,7 @@ bool rentACar(
  */
 
 int calculateSlope(int xCord, int yCord) {
-  ignoreUnused(xcord, yCord);
+  ignoreUnused(xCord, yCord);
   return {};
 }
 
@@ -141,6 +141,7 @@ bool checkAir(double pressure) {
  */
 long calculateDistance(double xCord, double yCord) {
   ignoreUnused(xCord, yCord);
+  return {};
 }
 /*
  4)
@@ -165,7 +166,7 @@ void stopPlay(int timeToStop) { ignoreUnused(timeToStop); }
  7)
  */
 bool isOutOfTime(double length, double time) {
-  ignoreUnused(length, double);
+  ignoreUnused(length, time);
   return {};
 }
 
