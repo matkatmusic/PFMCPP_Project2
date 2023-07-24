@@ -123,7 +123,8 @@ bool rentACar(
  1)
  */
 
-int calculateSlope(int xCord, int yCord) {
+int calculateSlope(int xCord, int yCord) 
+{
   ignoreUnused(xCord, yCord);
   return {};
 }
@@ -131,7 +132,8 @@ int calculateSlope(int xCord, int yCord) {
 /*
  2)
  */
-bool checkAir(double pressure) {
+bool checkAir(double pressure)
+{
   ignoreUnused(pressure);
   return {};
 }
@@ -139,14 +141,16 @@ bool checkAir(double pressure) {
 /*
  3)
  */
-long calculateDistance(double xCord, double yCord) {
+long calculateDistance(double xCord, double yCord) 
+{
   ignoreUnused(xCord, yCord);
   return {};
 }
 /*
  4)
  */
-long playMusic(bool powerOn) {
+long playMusic(bool powerOn) 
+{
   ignoreUnused(powerOn);
   return {};
 }
@@ -155,7 +159,8 @@ long playMusic(bool powerOn) {
  5)
  */
 
-void changePitch(int speed, double velocity) { ignoreUnused(speed, velocity); }
+void changePitch(int speed, double velocity) 
+{ ignoreUnused(speed, velocity); }
 
 /*
  6)
@@ -165,7 +170,8 @@ void stopPlay(int timeToStop) { ignoreUnused(timeToStop); }
 /*
  7)
  */
-bool isOutOfTime(double length, double time) {
+bool isOutOfTime(double length, double time) 
+{
   ignoreUnused(length, time);
   return {};
 }
@@ -173,14 +179,16 @@ bool isOutOfTime(double length, double time) {
 /*
  8)
  */
-void fillWithZeros(int bufferSize, int length) {
+void fillWithZeros(int bufferSize, int length) 
+{
   ignoreUnused(bufferSize, length);
 }
 
 /*
  9)
  */
-double calculateAcceleration(double distance, double velocity) {
+double calculateAcceleration(double distance, double velocity)
+{
   ignoreUnused(distance, velocity);
   return {};
 }
@@ -188,7 +196,8 @@ double calculateAcceleration(double distance, double velocity) {
 /*
  10)
  */
-double writeToBuffer(long data, int size) {
+double writeToBuffer(long data, int size) 
+{
   ignoreUnused(data, size);
   return {};
 }
