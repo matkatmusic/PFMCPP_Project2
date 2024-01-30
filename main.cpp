@@ -71,7 +71,7 @@ void variableDeclarations()
     float temperatureJuneAvrgCelsius = 22.5678f;
     float amountEuro = 99.9987f;
 
-    double pi = 3.141592653589793f;
+    double pi = 3.141592653589793;
     double distanceAverage = 1000.7543;
     double weight = 72.34567;
 
@@ -145,9 +145,9 @@ int bikeFit(int yourHeight, int yourWeight, int yourLegLength)
 /*
  6)
  */
-bool isosceles(float sideA = .45, float sideB = .45, float sideC = .90)
+bool legalyDriveCar(bool hasLicense = true, bool isInsured = true, int isOfAge = 18)
 {
-    ignoreUnused(sideA, sideB, sideC);
+    ignoreUnused(hasLicense, isInsured, isOfAge);
     return {};
 }
 /*
@@ -212,7 +212,7 @@ int main()
     //5)
     auto bikeFitted = bikeFit(180, 83, 88);
     //6)
-    auto isoscelesTrue = isosceles(0.45f, 0.45f, 0.90f);
+    auto legalyDriving = legalyDriveCar(true, true, 18);
     //7)
     auto speedingAllert = speedingTicket(55, 60);
     //8)
@@ -222,7 +222,7 @@ int main()
     //10)
     auto sleepQualityRange = sleepQuality(7, 6, 5);
     
-    ignoreUnused(carRented, notePlayed, resumePlayFrom, theaterEntered, fractionElements, bikeFitted, isosceles, speedingAllert, frqntFlyerBonusConfirmed, stepsGoalGab, sleepQualityRange);
+    ignoreUnused(carRented, notePlayed, resumePlayFrom, theaterEntered, fractionElements, bikeFitted, legalyDriving, speedingAllert, frqntFlyerBonusConfirmed, stepsGoalGab, sleepQualityRange);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
