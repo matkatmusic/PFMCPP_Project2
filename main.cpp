@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- int //integer
- float //floating point
- double //double precision floating point
- bool //boolean
- char //character
- unsigned int //unsigned integer, only positive values
+ int             //integer
+ float           //floating point
+ double          //double precision floating point
+ bool            //boolean
+ char            //character
+ unsigned int    //unsigned integer, only positive values
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -137,9 +137,9 @@ double fraction(int numerator, int denominator)
 /*
  5)
  */
-int bikeFit(int yourHeight, int yourWeight, int yourLegLength)
+int bikeFit(int yourHeight, int yourUpperBodyLength, int yourLegLength)
 {
-    ignoreUnused(yourHeight, yourWeight, yourLegLength);
+    ignoreUnused(yourHeight, yourUpperBodyLength, yourLegLength);
     return {};
 }
 /*
@@ -161,9 +161,9 @@ bool speedingTicket(int spdLimit = 55, int yourSpeed = 60)
 /*
  8)
  */
-int freequentFlyerBonus(int numberFlights = 5, int numberFlightsBonus = 10)
+int freequentFlyerBonus(int numFlights = 5, int numFlightMiles = 5000)
 {
-    ignoreUnused(numberFlights, numberFlightsBonus);
+    ignoreUnused(numFlights, numFlightMiles);
     return {};
 }
 /*
@@ -177,9 +177,9 @@ int stepsADay(int setGaol = 10000, int steps = 5000)
 /*
  10)
  */
-int sleepQuality(int deeb, int light, int rem)
+int sleepQuality(int deebSleep, int lightSleep, int remSleep)
 {
-    ignoreUnused(deeb, light, rem);
+    ignoreUnused(deebSleep, lightSleep, remSleep);
     return {};
 }
 /*
@@ -216,7 +216,7 @@ int main()
     //7)
     auto speedingAllert = speedingTicket(55, 60);
     //8)
-    auto frqntFlyerBonusConfirmed = freequentFlyerBonus(5, 10);
+    auto frqntFlyerBonusConfirmed = freequentFlyerBonus(5, 5000);
     //9)
     auto stepsGoalGab = stepsADay(10000, 5000);
     //10)
