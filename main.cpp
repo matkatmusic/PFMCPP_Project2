@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ int             //integer
+ float           //floating point
+ double          //double precision floating point
+ bool            //boolean
+ char            //character
+ unsigned int    //unsigned integer, only positive values
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +62,32 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
+    int myNumber = 1;
+    int x = -4;
+    int y = 5;
+
+    float myFloat = 1.5f;
+    float temperatureJuneAvrgCelsius = 22.5678f;
+    float amountEuro = 99.9987f;
+
+    double pi = 3.141592653589793;
+    double distanceAverage = 1000.7543;
+    double weight = 72.34567;
+
+    bool engineOn = true;
+    bool engineOff = false;
+    bool engineOnOrOff = true;
+
+    char playerOne = 'a';
+    char variable = 'b';
+    char grade = 'A';
+
+    unsigned int count = 0;
+    unsigned int index = 1;
+    unsigned int score = 100;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myNumber, x, y, myFloat, temperatureJuneAvrgCelsius, amountEuro, pi, distanceAverage, weight, engineOn, engineOff, engineOnOrOff, playerOne, variable, grade, count, index, score); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,43 +104,84 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+bool playPiano(int note = 64, int velocity = 127)
+{
+    ignoreUnused(note, velocity);
+    return {};
+}
 
 /*
  2)
  */
-
+bool ebookResumePlay(int page = 34, int volume = 100)
+{
+    ignoreUnused(page, volume);
+    return {};
+}
 /*
  3)
  */
-
+bool enterTheater(bool validTicket = 1)
+{
+    ignoreUnused(validTicket);
+    return {};
+}
 /*
  4)
  */
-
+double fraction(int numerator, int denominator)
+{
+    ignoreUnused(numerator, denominator);
+    return {};
+}
 /*
  5)
  */
-
+int bikeFit(int yourHeight, int yourUpperBodyLength, int yourLegLength)
+{
+    ignoreUnused(yourHeight, yourUpperBodyLength, yourLegLength);
+    return {};
+}
 /*
  6)
  */
-
+bool legalyDriveCar(bool hasLicense = true, bool isInsured = true, int isOfAge = 18)
+{
+    ignoreUnused(hasLicense, isInsured, isOfAge);
+    return {};
+}
 /*
  7)
  */
-
+bool speedingTicket(int spdLimit = 55, int yourSpeed = 60)
+{
+    ignoreUnused(spdLimit, yourSpeed);
+    return {};
+}
 /*
  8)
  */
-
+int freequentFlyerBonus(int numFlights = 5, int numFlightMiles = 5000)
+{
+    ignoreUnused(numFlights, numFlightMiles);
+    return {};
+}
 /*
  9)
  */
-
+int stepsADay(int setGaol = 10000, int steps = 5000)
+{
+    ignoreUnused(setGaol, steps);
+    return {};
+}
 /*
  10)
  */
-
+int sleepQuality(int deebSleep, int lightSleep, int remSleep)
+{
+    ignoreUnused(deebSleep, lightSleep, remSleep);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +202,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto notePlayed = playPiano(64, 127);
     //2)
-    
+    auto resumePlayFrom = ebookResumePlay(34, 100);
     //3)
-    
+    auto theaterEntered = enterTheater(1);
     //4)
-    
+    auto fractionElements = fraction(1, 2);
     //5)
-    
+    auto bikeFitted = bikeFit(180, 83, 88);
     //6)
-    
+    auto legalyDriving = legalyDriveCar(true, true, 18);
     //7)
-    
+    auto speedingAllert = speedingTicket(55, 60);
     //8)
-    
+    auto frqntFlyerBonusConfirmed = freequentFlyerBonus(5, 5000);
     //9)
-    
+    auto stepsGoalGab = stepsADay(10000, 5000);
     //10)
+    auto sleepQualityRange = sleepQuality(7, 6, 5);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, notePlayed, resumePlayFrom, theaterEntered, fractionElements, bikeFitted, legalyDriving, speedingAllert, frqntFlyerBonusConfirmed, stepsGoalGab, sleepQualityRange);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
